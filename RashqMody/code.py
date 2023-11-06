@@ -27,7 +27,7 @@ async def dailygiftt(app,query):
                 user_code = int(ask1.text)
                 if user_code == code:
                     await ask1.reply("• تم التحقق بنجاح من أنك لست روبوت ✅\n\n• ارسل /start")
-                    info = {'coins': 0.2, 'id': user_id, 'premium': False, 'admin': False, "phone": [], "users": [], "date": str(time.time())}
+                    info = {'coins': 0, 'id': user_id, 'premium': False, 'admin': False, "phone": [], "users": [], "date": str(time.time())}
                     db.set(f'user_{user_id}', info)
                     xxe = db.get("admin_list")
                     sc = set(xxe)
